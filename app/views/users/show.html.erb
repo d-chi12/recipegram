@@ -30,7 +30,6 @@
                 </td>
                 <td>
                     <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
-                      g
                 </td>
                 <% end %>
               </tr>
@@ -48,3 +47,7 @@
     </div>
   </div>
 </section>
+
+<% @user.recipes.each do |recipe| %>
+  <%= attachment_image_tag recipe, :image %>
+<% end %>
